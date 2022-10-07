@@ -1,0 +1,22 @@
+applications:
+  mysql:
+    channel: latest/edge
+    charm: mysql
+    constraints: arch=amd64
+    num_units: 1
+    revision: 80
+    to:
+    - '0'
+  mysql-router:
+    channel: dpe/edge
+    charm: mysql-router
+    revision: 42
+machines:
+  '0':
+    constraints: arch=amd64
+name: mysql-bundle
+relations:
+- - mysql:database
+  - mysql-router:backend-database
+series: focal
+type: bundle
