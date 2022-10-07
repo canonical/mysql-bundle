@@ -8,13 +8,11 @@ The objective of this page is to provide directions to get up and running with C
 
 Currently, we support this distribution with Ubuntu 20.04.
 
-To get started, please install the following:
-- LXD
-- Juju
+To deploy the bundle to a bootstrapped juju controller, simply run
 
-Then, please bootstrap the juju controller with microk8s using `juju bootstrap localhost <controller_name>`.
-
-Finally add a juju model with `juju add-model <model-name>` and deploy the bundle with `juju deploy mysql-bundle`.
+```shell
+juju deploy mysql-bundle
+```
 
 ## Bundle Components
 - [mysql](https://charmhub.io/mysql): A k8s charm to deploy MySQL with Group Replication.
