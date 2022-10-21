@@ -4,13 +4,13 @@ applications:
     charm: mysql
     constraints: arch=amd64
     num_units: 1
-    revision: 80
+    revision: 81
     to:
     - '0'
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 42
+    revision: 44
 machines:
   '0':
     constraints: arch=amd64
