@@ -6,7 +6,7 @@ applications:
     num_units: 3
     revision: 81
     to:
-      - "0"
+      - '0'
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
@@ -20,8 +20,10 @@ applications:
     options:
       ca-common-name: canonical
       generate-self-signed-certificates: true
+    to:
+      - '0'
 machines:
-  "0":
+  '0':
     constraints: arch=amd64
 name: mysql-bundle
 relations:
