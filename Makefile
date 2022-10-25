@@ -19,3 +19,8 @@ destroy-model:
 
 release: build
 	charmcraft upload $(BUILD_DIRECTORY)/*.zip --name mysql-bundle --release=latest/edge
+
+remove:
+	$(eval apps := $(shell cat releases/latest/mysql-bundle.yaml |yq '.applications|keys' -o t))
+	juju remove-application $(apps)
+
