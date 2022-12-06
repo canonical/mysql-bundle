@@ -4,32 +4,32 @@ applications:
     charm: mysql
     constraints: arch=amd64
     num_units: 3
-    revision: 81
+    revision: 86
     to:
-      - '0'
+    - '0'
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 44
+    revision: 60
   tls-certificates-operator:
     channel: latest/edge
     charm: tls-certificates-operator
     constraints: arch=amd64
-    revision: 15
-    scale: 1
     options:
       ca-common-name: canonical
       generate-self-signed-certificates: true
+    revision: 16
+    scale: 1
     to:
-      - '0'
+    - '0'
 machines:
   '0':
     constraints: arch=amd64
 name: mysql-bundle
 relations:
-  - - mysql:database
-    - mysql-router:backend-database
-  - - mysql:certificates
-    - tls-certificates-operator:certificates
+- - mysql:database
+  - mysql-router:backend-database
+- - mysql:certificates
+  - tls-certificates-operator:certificates
 series: focal
 type: bundle
