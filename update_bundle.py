@@ -2,6 +2,8 @@
 # Copyright 2022 Canonical Ltd.
 # See LICENSE file for licensing details.
 
+"""The script to update Juju bundle.yaml on CI/CD."""
+
 import logging
 import subprocess
 import sys
