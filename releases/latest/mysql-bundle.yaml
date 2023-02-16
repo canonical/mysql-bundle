@@ -4,7 +4,7 @@ applications:
     charm: mysql
     constraints: arch=amd64
     num_units: 3
-    revision: 86
+    revision: 111
     to:
     - '0'
   mysql-router:
@@ -18,7 +18,7 @@ applications:
     options:
       ca-common-name: canonical
       generate-self-signed-certificates: true
-    revision: 20
+    revision: 22
     scale: 1
     to:
     - '0'
