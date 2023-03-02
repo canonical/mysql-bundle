@@ -43,15 +43,16 @@ def update_bundle(bundle_path):
     """Updates a bundle's revision number."""
     bundle_data = yaml.safe_load(Path(bundle_path).read_text())
 
-    for applications in bundle_data["applications"]:
-        if series := bundle_data["applications"][applications].get("series"):
+    for juju_app in bundle_data["applications"]:
+        application = bundle_data["applications"][juju_app]["charm"]
+        if series := bundle_data["applications"][juju_app].get("series"):
             ubuntu_version = subprocess.check_output(
                 ["ubuntu-distro-info", "--series", series, "--release"], encoding="utf-8"
             ).split(" ")[0]
         else:
             ubuntu_version = None
-        bundle_data["applications"][applications]["revision"] = fetch_revision(
-            applications, bundle_data["applications"][applications]["channel"], ubuntu_version
+        bundle_data["applications"][juju_app]["revision"] = fetch_revision(
+            application, bundle_data["applications"][juju_app]["channel"], ubuntu_version
         )
 
     with open(bundle_path, "w") as bundle:
