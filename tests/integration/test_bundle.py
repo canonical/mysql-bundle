@@ -17,7 +17,6 @@ logger = logging.getLogger(__name__)
 @pytest.mark.abort_on_fail
 async def test_deploy_bundle(ops_test: OpsTest) -> None:
     """Deploy bundle with app and release as a product."""
-
     async with ops_test.fast_forward():
         logger.info(f"Deploying test app {APPLICATION_APP}")
         await ops_test.model.deploy(
