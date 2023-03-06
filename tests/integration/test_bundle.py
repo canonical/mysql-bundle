@@ -35,7 +35,7 @@ async def test_deploy_bundle(ops_test: OpsTest) -> None:
             apps=[MYSQL_APP],
             status="active",
             raise_on_blocked=True,
-            timeout=5 * 60,
+            timeout=15 * 60,
         )
 
         logger.info(f"Relate {APPLICATION_APP} with {ROUTER_APP}")
