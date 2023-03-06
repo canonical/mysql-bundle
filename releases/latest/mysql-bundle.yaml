@@ -8,6 +8,7 @@ applications:
     channel: dpe/edge
     charm: mysql-router
     revision: 63
+    series: focal
   tls-certificates:
     channel: latest/edge
     charm: tls-certificates-operator
@@ -24,5 +25,6 @@ relations:
   - mysql-router:backend-database
 - - mysql:certificates
   - tls-certificates:certificates
+series: jammy
 source: https://github.com/canonical/mysql-bundle
 type: bundle
