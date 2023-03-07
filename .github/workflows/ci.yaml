@@ -1,4 +1,4 @@
-# Copyright 2022 Canonical Ltd.
+# Copyright 2023 Canonical Ltd.
 # See LICENSE file for licensing details.
 name: Tests
 
@@ -26,3 +26,19 @@ jobs:
         run: python3 -m pip install tox
       - name: Run linters
         run: tox run -e lint
+
+  integration-test-lxd-database:
+    name: Integration tests for mysql-bundle (lxd)
+    needs:
+      - lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup operator environment
+        uses: charmed-kubernetes/actions-operator@main
+        with:
+          provider: lxd
+      - name: Run integration bundle test
+        run: tox -e integration
