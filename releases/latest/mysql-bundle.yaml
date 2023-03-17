@@ -3,7 +3,7 @@ applications:
     channel: latest/edge
     charm: mysql
     num_units: 3
-    revision: 124
+    revision: 127
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
