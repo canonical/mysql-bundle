@@ -7,7 +7,7 @@ applications:
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 63
+    revision: 66
     series: focal
   tls-certificates:
     channel: latest/edge
