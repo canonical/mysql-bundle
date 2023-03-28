@@ -45,7 +45,7 @@ jobs:
         with:
           provider: lxd
       - name: Run integration bundle test
-        run: tox run -e integration --junit-xml=pytest_report.xml
+        run: tox run -e integration -- --junit-xml=pytest_report.xml
       - name: 'Foresight: Collect test results'
         uses: runforesight/foresight-test-kit-action@v1
         if: ${{ success() || failure() }}
