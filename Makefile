@@ -18,7 +18,7 @@ destroy-model:
 	juju destroy-model --force --destroy-storage $(shell juju models --format=yaml | yq ".current-model")
 
 release: build
-	charmcraft upload $(BUILD_DIRECTORY)/*.zip --name mysql-bundle --release=latest/edge
+	charmcraft upload $(BUILD_DIRECTORY)/*.zip --name mysql-bundle --release=8.0/edge
 
 remove:
 	$(eval apps := $(shell cat releases/latest/mysql-bundle.yaml |yq '.applications|keys' -o t))
