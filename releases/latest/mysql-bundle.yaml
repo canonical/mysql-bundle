@@ -3,11 +3,11 @@ applications:
     channel: latest/edge
     charm: mysql
     num_units: 3
-    revision: 132
+    revision: 143
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 66
+    revision: 76
     series: focal
   tls-certificates:
     channel: latest/edge
@@ -16,7 +16,7 @@ applications:
     options:
       ca-common-name: canonical
       generate-self-signed-certificates: true
-    revision: 22
+    revision: 23
 description: Charmed MySQL bundle
 issues: https://github.com/canonical/mysql-bundle/issues
 name: mysql-bundle
