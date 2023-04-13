@@ -44,6 +44,7 @@ jobs:
         uses: charmed-kubernetes/actions-operator@main
         with:
           provider: lxd
+          bootstrap-options: "--constraints mem=1G"
       - name: Run integration bundle test
         run: tox run -e integration -- --junit-xml=pytest_report.xml
       - name: 'Foresight: Collect test results'
