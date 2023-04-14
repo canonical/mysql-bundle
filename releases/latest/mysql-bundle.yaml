@@ -1,6 +1,6 @@
 applications:
   mysql:
-    channel: latest/edge
+    channel: 8.0/edge
     charm: mysql
     num_units: 3
     revision: 143
