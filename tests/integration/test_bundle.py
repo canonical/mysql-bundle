@@ -23,7 +23,7 @@ async def test_deploy_bundle(ops_test: OpsTest) -> None:
             APPLICATION_APP,
             channel="edge",
             application_name=APPLICATION_APP,
-            series="focal",
+            series="jammy",
             num_units=3,
         )
 

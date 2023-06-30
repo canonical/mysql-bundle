@@ -8,7 +8,7 @@ applications:
     channel: dpe/edge
     charm: mysql-router
     revision: 76
-    series: focal
+    series: jammy
   tls-certificates:
     channel: latest/edge
     charm: tls-certificates-operator
