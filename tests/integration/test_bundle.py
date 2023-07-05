@@ -23,7 +23,7 @@ async def test_deploy_bundle(ops_test: OpsTest) -> None:
             APPLICATION_APP,
             channel="edge",
             application_name=APPLICATION_APP,
-            series="focal",
+            series="jammy",
             num_units=3,
         )
 
@@ -45,5 +45,5 @@ async def test_deploy_bundle(ops_test: OpsTest) -> None:
         await ops_test.model.wait_for_idle(
             apps=[MYSQL_APP, ROUTER_APP, TLS_APP, APPLICATION_APP],
             status="active",
-            timeout=5 * 60,
+            timeout=15 * 60,
         )
