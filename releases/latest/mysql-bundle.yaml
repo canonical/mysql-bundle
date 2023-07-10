@@ -3,11 +3,11 @@ applications:
     channel: 8.0/edge
     charm: mysql
     num_units: 3
-    revision: 167
+    revision: 168
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 85
+    revision: 86
   tls-certificates:
     channel: latest/stable
     charm: tls-certificates-operator
