@@ -1,4 +1,7 @@
 # Canonical Distribution of MySQL + MySQLRouter
+[![Charmhub](https://charmhub.io/mysql-bundle/badge.svg)](https://charmhub.io/mysql-bundle)
+[![Release](https://github.com/canonical/mysql-bundle/actions/workflows/release.yaml/badge.svg)](https://github.com/canonical/mysql-bundle/actions/workflows/release.yaml)
+[![Tests](https://github.com/canonical/mysql-bundle/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/canonical/mysql-bundle/actions/workflows/ci.yaml)
 
 Welcome to the Canonical Distribution of MySQL + MySQLRouter.
 
