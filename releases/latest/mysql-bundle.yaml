@@ -1,21 +1,110 @@
 applications:
+  data-integrator:
+    channel: latest/edge
+    charm: data-integrator
+    constraints: arch=amd64
+    num_units: 1
+    revision: 27
+    series: jammy
+    to:
+    - '0'
+  grafana-agent:
+    channel: latest/edge
+    charm: grafana-agent
+    revision: 209
+    series: jammy
+  landscape-client:
+    channel: latest/edge
+    charm: landscape-client
+    revision: 69
+    series: jammy
+  mysql-router-data-integrator:  # TODO: finalize
+    channel: latest/edge
+    charm: data-integrator
+    constraints: arch=amd64
+    num_units: 1
+    revision: 27
+    series: jammy
+    to:
+    - '1'
   mysql:
     channel: 8.0/edge
     charm: mysql
+    constraints: arch=amd64
     num_units: 3
-    revision: 170
+    revision: 249
+    series: jammy
+    to:
+    - '2'
+    - '3'
+    - '4'
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 93
-  tls-certificates:
-    channel: latest/stable
-    charm: tls-certificates-operator
+    revision: 216
+    series: jammy
+  mysql-test-app:
+    channel: latest/edge
+    charm: mysql-test-app
+    revision: 46
+    series: jammy
+  s3-integrator:
+    channel: latest/edge
+    charm: s3-integrator
+    constraints: arch=amd64
     num_units: 1
-    options:
-      ca-common-name: canonical
-      generate-self-signed-certificates: true
-    revision: 22
+    revision: 28
+    series: jammy
+    to:
+    - '5'
+  self-signed-certificates:
+    channel: latest/edge
+    charm: self-signed-certificates
+    constraints: arch=amd64
+    num_units: 1
+    revision: 155
+    series: jammy
+    to:
+    - '6'
+  sysbench:
+    channel: latest/edge
+    charm: sysbench
+    constraints: arch=amd64
+    num_units: 1
+    revision: 38
+    series: jammy
+    to:
+    - '7'
+  ubuntu-advantage:
+    channel: latest/edge
+    charm: ubuntu-advantage
+    revision: 88
+    series: jammy
+machines:
+  '0':
+    constraints: arch=amd64
+    series: jammy
+  '1':
+    constraints: arch=amd64
+    series: jammy
+  '2':
+    constraints: arch=amd64
+    series: jammy
+  '3':
+    constraints: arch=amd64
+    series: jammy
+  '4':
+    constraints: arch=amd64
+    series: jammy
+  '5':
+    constraints: arch=amd64
+    series: jammy
+  '6':
+    constraints: arch=amd64
+    series: jammy
+  '7':
+    constraints: arch=amd64
+    series: jammy
 description: Charmed MySQL bundle
 issues: https://github.com/canonical/mysql-bundle/issues
 name: mysql-bundle
@@ -23,7 +112,31 @@ relations:
 - - mysql:database
   - mysql-router:backend-database
 - - mysql:certificates
-  - tls-certificates:certificates
+  - self-signed-certificates:certificates
+- - mysql-router:certificates
+  - self-signed-certificates:certificates
+- - mysql:s3-parameters
+  - s3-integrator:s3-credentials
+- - mysql:database
+  - data-integrator:mysql
+- - mysql:database
+  - sysbench:mysql
+- - mysql:cos-agent
+  - grafana-agent:cos-agent
+- - mysql:juju-info
+  - ubuntu-advantage:juju-info
+- - mysql:juju-info
+  - landscape-client:container
+- - mysql-router:database
+  - mysql-router-data-integrator:mysql
+- - mysql-router-data-integrator:juju-info
+  - grafana-agent:juju-info
+- - mysql-router:cos-agent
+  - grafana-agent:cos-agent
+- - mysql-router-data-integrator:juju-info
+  - ubuntu-advantage:juju-info
+- - mysql-router-data-integrator:juju-info
+  - landscape-client:container
 series: jammy
 source: https://github.com/canonical/mysql-bundle
 type: bundle

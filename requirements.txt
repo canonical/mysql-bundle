@@ -1,1 +1,2 @@
 ops >= 1.5.3
+mysql-connector-python ~= 8.0.33
