@@ -46,6 +46,7 @@ applications:
   mysql-test-app:
     channel: latest/edge
     charm: mysql-test-app
+    constraints: arch=amd64
     revision: 46
     series: jammy
   s3-integrator:
