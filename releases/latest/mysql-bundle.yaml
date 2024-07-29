@@ -4,35 +4,26 @@ applications:
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 27
+    revision: 39
     series: jammy
     to:
     - '0'
   grafana-agent:
     channel: latest/edge
     charm: grafana-agent
-    revision: 209
+    revision: 225
     series: jammy
   landscape-client:
     channel: latest/edge
     charm: landscape-client
     revision: 69
     series: jammy
-  mysql-router-data-integrator:
-    channel: latest/edge
-    charm: data-integrator
-    constraints: arch=amd64
-    num_units: 1
-    revision: 27
-    series: jammy
-    to:
-    - '1'
   mysql:
     channel: 8.0/edge
     charm: mysql
     constraints: arch=amd64
     num_units: 3
-    revision: 249
+    revision: 261
     series: jammy
     to:
     - '2'
@@ -41,8 +32,17 @@ applications:
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 216
+    revision: 218
     series: jammy
+  mysql-router-data-integrator:
+    channel: latest/edge
+    charm: data-integrator
+    constraints: arch=amd64
+    num_units: 1
+    revision: 39
+    series: jammy
+    to:
+    - '1'
   mysql-test-app:
     channel: latest/edge
     charm: mysql-test-app
@@ -54,7 +54,7 @@ applications:
     charm: s3-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 28
+    revision: 30
     series: jammy
     to:
     - '5'
@@ -63,7 +63,7 @@ applications:
     charm: self-signed-certificates
     constraints: arch=amd64
     num_units: 1
-    revision: 155
+    revision: 162
     series: jammy
     to:
     - '6'
@@ -72,7 +72,7 @@ applications:
     charm: sysbench
     constraints: arch=amd64
     num_units: 1
-    revision: 38
+    revision: 44
     series: jammy
     to:
     - '7'
@@ -81,6 +81,8 @@ applications:
     charm: ubuntu-advantage
     revision: 88
     series: jammy
+description: Charmed MySQL bundle
+issues: https://github.com/canonical/mysql-bundle/issues
 machines:
   '0':
     constraints: arch=amd64
@@ -106,8 +108,6 @@ machines:
   '7':
     constraints: arch=amd64
     series: jammy
-description: Charmed MySQL bundle
-issues: https://github.com/canonical/mysql-bundle/issues
 name: mysql-bundle
 relations:
 - - mysql:database
