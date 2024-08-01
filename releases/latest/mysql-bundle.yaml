@@ -23,7 +23,7 @@ applications:
     charm: mysql
     constraints: arch=amd64
     num_units: 3
-    revision: 261
+    revision: 263
     series: jammy
     to:
     - '2'
@@ -63,7 +63,7 @@ applications:
     charm: self-signed-certificates
     constraints: arch=amd64
     num_units: 1
-    revision: 162
+    revision: 164
     series: jammy
     to:
     - '6'
