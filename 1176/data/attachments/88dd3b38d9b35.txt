@@ -1,0 +1,303 @@
+[32mINFO    [0m pytest_operator.plugin:plugin.py:734 Connecting to existing model localhost-localhost:test on unspecified cloud
+[32mINFO    [0m integration.test_smoke:test_smoke.py:67 Deploying bundle
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm data-integrator for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm mysql-router for series jammy from channel dpe/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm mysql-test-app for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm s3-integrator for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm self-signed-certificates for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm sysbench for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm ubuntu-advantage for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm grafana-agent for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm landscape-client for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm mysql for series jammy from channel 8.0/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application data-integrator on jammy using $addCharm-0
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/data-integrator-38
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application mysql on jammy using $addCharm-9
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/mysql-262
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application mysql-router on jammy using $addCharm-12
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/mysql-router-217
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application mysql-router-data-integrator on jammy using $addCharm-0
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/data-integrator-38
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application mysql-test-app on jammy using $addCharm-17
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/mysql-test-app-46
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application s3-integrator on jammy using $addCharm-20
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/s3-integrator-29
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application self-signed-certificates on jammy using $addCharm-23
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/self-signed-certificates-163
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application sysbench on jammy using $addCharm-26
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/sysbench-43
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application ubuntu-advantage on jammy using $addCharm-29
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/ubuntu-advantage-85
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application grafana-agent on jammy using $addCharm-3
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/grafana-agent-223
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application landscape-client on jammy using $addCharm-6
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/landscape-client-69
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:database - $deploy-13:backend-database
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:database <-> mysql-router:backend-database
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:certificates - $deploy-24:certificates
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:certificates <-> self-signed-certificates:certificates
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-13:certificates - $deploy-24:certificates
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router:certificates <-> self-signed-certificates:certificates
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:s3-parameters - $deploy-21:s3-credentials
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:s3-parameters <-> s3-integrator:s3-credentials
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:database - $deploy-1:mysql
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:database <-> data-integrator:mysql
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:database - $deploy-27:mysql
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:database <-> sysbench:mysql
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:cos-agent - $deploy-4:cos-agent
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:cos-agent <-> grafana-agent:cos-agent
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:juju-info - $deploy-30:juju-info
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:juju-info <-> ubuntu-advantage:juju-info
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:juju-info - $deploy-7:container
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:juju-info <-> landscape-client:container
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-13:database - $deploy-15:mysql
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router:database <-> mysql-router-data-integrator:mysql
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-15:juju-info - $deploy-4:juju-info
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router-data-integrator:juju-info <-> grafana-agent:juju-info
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-13:cos-agent - $deploy-4:cos-agent
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router:cos-agent <-> grafana-agent:cos-agent
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-15:juju-info - $deploy-30:juju-info
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router-data-integrator:juju-info <-> ubuntu-advantage:juju-info
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-15:juju-info - $deploy-7:container
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router-data-integrator:juju-info <-> landscape-client:container
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-1 unit to $addMachines-32
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-15 unit to $addMachines-33
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-10
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-13
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-15
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-18
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-1
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-21
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-24
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-27
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-30
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-4
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-7
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-10 unit to $addMachines-34
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-10 unit to $addMachines-35
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-10 unit to $addMachines-36
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-21 unit to $addMachines-37
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-24 unit to $addMachines-38
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-27 unit to $addMachines-39
+[32mINFO    [0m integration.test_smoke:test_smoke.py:41 Waiting for active: mysql, self-signed-certificates, sysbench
+[32mINFO    [0m integration.test_smoke:test_smoke.py:47 Waiting for blocked: data-integrator, grafana-agent, mysql-router-data-integrator, landscape-client, s3-integrator, ubuntu-advantage
+[32mINFO    [0m integration.test_smoke:test_smoke.py:54 Waiting for waiting: mysql-router
+[32mINFO    [0m integration.test_smoke:test_smoke.py:72 Configuring s3-integrator credentials
+[32mINFO    [0m integration.test_smoke:test_smoke.py:41 Waiting for active: mysql, self-signed-certificates, sysbench, s3-integrator
+[32mINFO    [0m integration.test_smoke:test_smoke.py:47 Waiting for blocked: data-integrator, grafana-agent, mysql-router-data-integrator, landscape-client, ubuntu-advantage
+[32mINFO    [0m integration.test_smoke:test_smoke.py:54 Waiting for waiting: mysql-router
+[32mINFO    [0m integration.test_smoke:test_smoke.py:86 Configuring data-integrator
+[32mINFO    [0m integration.test_smoke:test_smoke.py:41 Waiting for active: mysql, self-signed-certificates, sysbench, s3-integrator, data-integrator
+[32mINFO    [0m integration.test_smoke:test_smoke.py:47 Waiting for blocked: grafana-agent, mysql-router-data-integrator, landscape-client, ubuntu-advantage
+[32mINFO    [0m integration.test_smoke:test_smoke.py:54 Waiting for waiting: mysql-router
+[32mINFO    [0m integration.test_smoke:test_smoke.py:95 Confirming data-integrator's database exists
+[32mINFO    [0m pytest_operator.plugin:plugin.py:862 Model status:
+
+Model  Controller           Cloud/Region         Version  SLA          Timestamp
+test   localhost-localhost  localhost/localhost  3.5.3    unsupported  01:35:06Z
+
+App                           Version          Status   Scale  Charm                     Channel      Rev  Exposed  Message
+data-integrator                                active       1  data-integrator           latest/edge   38  no       
+grafana-agent                                  blocked      4  grafana-agent             latest/edge  223  no       Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+landscape-client                               blocked      4  landscape-client          latest/edge   69  no       Registration failed!
+mysql                         8.0.37-0ubun...  active       3  mysql                     8.0/edge     262  no       
+mysql-router                  8.0.37-0ubun...  waiting      1  mysql-router              dpe/edge     217  no       Waiting for mysql-router-data-integrator app on database endpoint
+mysql-router-data-integrator                   blocked      1  data-integrator           latest/edge   38  no       Please specify either topic, index, or database name
+mysql-test-app                                 unknown      0  mysql-test-app            latest/edge   46  no       
+s3-integrator                                  active       1  s3-integrator             latest/edge   29  no       
+self-signed-certificates                       active       1  self-signed-certificates  latest/edge  163  no       
+sysbench                                       active       1  sysbench                  latest/edge   43  no       
+ubuntu-advantage                               blocked      4  ubuntu-advantage          latest/edge   85  no       No token configured
+
+Unit                             Workload  Agent      Machine  Public address  Ports           Message
+data-integrator/0*               active    idle       0        10.166.192.100                  
+mysql-router-data-integrator/0*  blocked   executing  1        10.166.192.110                  Please specify either topic, index, or database name
+  grafana-agent/0*               blocked   executing           10.166.192.110                  Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+  landscape-client/0*            blocked   idle                10.166.192.110                  Registration failed!
+  mysql-router/0*                active    executing           10.166.192.110                  
+  ubuntu-advantage/0*            blocked   idle                10.166.192.110                  No token configured
+mysql/0                          waiting   executing  2        10.166.192.30                   (get-password) Waiting to join the cluster
+  grafana-agent/1                blocked   idle                10.166.192.30                   Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+  landscape-client/1             blocked   idle                10.166.192.30                   Registration failed!
+  ubuntu-advantage/1             blocked   idle                10.166.192.30                   No token configured
+mysql/1*                         active    executing  3        10.166.192.245  3306,33060/tcp  Primary
+  grafana-agent/3                blocked   idle                10.166.192.245                  Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+  landscape-client/3             blocked   executing           10.166.192.245                  Registration failed!
+  ubuntu-advantage/3             blocked   executing           10.166.192.245                  No token configured
+mysql/2                          waiting   executing  4        10.166.192.49                   Waiting to join the cluster
+  grafana-agent/2                blocked   idle                10.166.192.49                   Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+  landscape-client/2             blocked   idle                10.166.192.49                   Registration failed!
+  ubuntu-advantage/2             blocked   idle                10.166.192.49                   No token configured
+s3-integrator/0*                 active    idle       5        10.166.192.205                  
+self-signed-certificates/0*      active    idle       6        10.166.192.218                  
+sysbench/0*                      active    idle       7        10.166.192.63                   
+
+Machine  State    Address         Inst id        Base          AZ  Message
+0        started  10.166.192.100  juju-558386-0  ubuntu@22.04      Running
+1        started  10.166.192.110  juju-558386-1  ubuntu@22.04      Running
+2        started  10.166.192.30   juju-558386-2  ubuntu@22.04      Running
+3        started  10.166.192.245  juju-558386-3  ubuntu@22.04      Running
+4        started  10.166.192.49   juju-558386-4  ubuntu@22.04      Running
+5        started  10.166.192.205  juju-558386-5  ubuntu@22.04      Running
+6        started  10.166.192.218  juju-558386-6  ubuntu@22.04      Running
+7        started  10.166.192.63   juju-558386-7  ubuntu@22.04      Running
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:868 Juju error logs:
+
+machine-1: 01:29:09 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-1: 01:29:09 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-mysql-router-data-integrator-0: 01:29:10 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-0: 01:29:19 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-0: 01:29:19 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-data-integrator-0: 01:29:19 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-grafana-agent-0: 01:29:21 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-ubuntu-advantage-0: 01:29:22 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-landscape-client-0: 01:29:22 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-mysql-router-0: 01:29:24 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-6: 01:29:38 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-6: 01:29:38 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-self-signed-certificates-0: 01:29:38 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-5: 01:29:41 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-5: 01:29:41 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-s3-integrator-0: 01:29:41 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-7: 01:29:44 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-7: 01:29:44 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-sysbench-0: 01:29:45 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-3: 01:29:47 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-3: 01:29:47 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-2: 01:29:47 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-2: 01:29:47 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-mysql-1: 01:29:47 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-mysql-0: 01:29:48 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-4: 01:29:50 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-4: 01:29:50 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-mysql-2: 01:29:51 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-ubuntu-advantage-1: 01:30:55 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-grafana-agent-1: 01:30:56 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-ubuntu-advantage-2: 01:30:57 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-grafana-agent-2: 01:30:58 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-landscape-client-2: 01:31:00 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-landscape-client-1: 01:31:00 ERROR juju.worker.meterstatus error running "meter-status-changed": exit status 127
+unit-ubuntu-advantage-3: 01:31:01 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-landscape-client-3: 01:31:02 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-grafana-agent-3: 01:31:03 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-landscape-client-0: 01:31:26 CRITICAL unit.landscape-client/0.juju-log   File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 261, in <module>
+    main(LandscapeClientCharm)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/main.py", line 436, in main
+    _emit_charm_event(charm, dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/main.py", line 144, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/framework.py", line 351, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/framework.py", line 853, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/framework.py", line 942, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 215, in _on_config_changed
+    self.run_landscape_client()
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 190, in run_landscape_client
+    self.send_registration()
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 178, in send_registration
+    if process_helper([CLIENT_CONFIG_CMD, "--silent"]):
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 104, in process_helper
+    log_error("".join(traceback.format_stack()))
+
+unit-landscape-client-0: 01:31:26 CRITICAL unit.landscape-client/0.juju-log An account name and computer title are required.
+Aborting Landscape configuration
+
+unit-landscape-client-1: 01:32:00 CRITICAL unit.landscape-client/1.juju-log   File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 261, in <module>
+    main(LandscapeClientCharm)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/main.py", line 436, in main
+    _emit_charm_event(charm, dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/main.py", line 144, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/framework.py", line 351, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/framework.py", line 853, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/framework.py", line 942, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 215, in _on_config_changed
+    self.run_landscape_client()
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 190, in run_landscape_client
+    self.send_registration()
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 178, in send_registration
+    if process_helper([CLIENT_CONFIG_CMD, "--silent"]):
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 104, in process_helper
+    log_error("".join(traceback.format_stack()))
+
+unit-landscape-client-1: 01:32:00 CRITICAL unit.landscape-client/1.juju-log An account name and computer title are required.
+Aborting Landscape configuration
+
+unit-landscape-client-2: 01:32:11 CRITICAL unit.landscape-client/2.juju-log   File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 261, in <module>
+    main(LandscapeClientCharm)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/main.py", line 436, in main
+    _emit_charm_event(charm, dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/main.py", line 144, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/framework.py", line 351, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/framework.py", line 853, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/framework.py", line 942, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 215, in _on_config_changed
+    self.run_landscape_client()
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 190, in run_landscape_client
+    self.send_registration()
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 178, in send_registration
+    if process_helper([CLIENT_CONFIG_CMD, "--silent"]):
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 104, in process_helper
+    log_error("".join(traceback.format_stack()))
+
+unit-landscape-client-2: 01:32:11 CRITICAL unit.landscape-client/2.juju-log An account name and computer title are required.
+Aborting Landscape configuration
+
+unit-landscape-client-3: 01:32:14 CRITICAL unit.landscape-client/3.juju-log   File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 261, in <module>
+    main(LandscapeClientCharm)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/main.py", line 436, in main
+    _emit_charm_event(charm, dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/main.py", line 144, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/framework.py", line 351, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/framework.py", line 853, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/framework.py", line 942, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 215, in _on_config_changed
+    self.run_landscape_client()
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 190, in run_landscape_client
+    self.send_registration()
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 178, in send_registration
+    if process_helper([CLIENT_CONFIG_CMD, "--silent"]):
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 104, in process_helper
+    log_error("".join(traceback.format_stack()))
+
+unit-landscape-client-3: 01:32:14 CRITICAL unit.landscape-client/3.juju-log An account name and computer title are required.
+Aborting Landscape configuration
+
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:947 Forgetting model main...
