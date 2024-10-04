@@ -4,7 +4,7 @@ applications:
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 65
+    revision: 71
     series: jammy
     to:
     - '0'
@@ -23,7 +23,7 @@ applications:
     charm: mysql
     constraints: arch=amd64
     num_units: 3
-    revision: 295
+    revision: 297
     series: jammy
     to:
     - '2'
@@ -39,7 +39,7 @@ applications:
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 65
+    revision: 71
     series: jammy
     to:
     - '1'
@@ -63,7 +63,7 @@ applications:
     charm: self-signed-certificates
     constraints: arch=amd64
     num_units: 1
-    revision: 198
+    revision: 200
     series: jammy
     to:
     - '6'
@@ -72,7 +72,7 @@ applications:
     charm: sysbench
     constraints: arch=amd64
     num_units: 1
-    revision: 76
+    revision: 78
     series: jammy
     to:
     - '7'
