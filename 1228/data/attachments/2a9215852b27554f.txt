@@ -1,0 +1,627 @@
+[32mINFO    [0m pytest_operator.plugin:plugin.py:766 Connecting to existing model localhost-localhost:test on unspecified cloud
+[32mINFO    [0m integration.test_smoke:test_smoke.py:67 Deploying bundle
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm data-integrator for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm mysql-router for series jammy from channel dpe/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm mysql-test-app for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm s3-integrator for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm self-signed-certificates for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm sysbench for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm ubuntu-advantage for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm grafana-agent for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm landscape-client for series jammy from channel latest/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: upload charm mysql for series jammy from channel 8.0/edge
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application data-integrator on jammy using $addCharm-0
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/data-integrator-71
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application mysql on jammy using $addCharm-9
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/mysql-297
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application mysql-router on jammy using $addCharm-12
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/mysql-router-247
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application mysql-router-data-integrator on jammy using $addCharm-0
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/data-integrator-71
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application mysql-test-app on jammy using $addCharm-17
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/mysql-test-app-63
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application s3-integrator on jammy using $addCharm-20
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/s3-integrator-59
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application self-signed-certificates on jammy using $addCharm-23
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/self-signed-certificates-200
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application sysbench on jammy using $addCharm-26
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/sysbench-78
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application ubuntu-advantage on jammy using $addCharm-29
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/ubuntu-advantage-113
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application grafana-agent on jammy using $addCharm-3
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/grafana-agent-282
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: deploy application landscape-client on jammy using $addCharm-6
+[32mINFO    [0m juju.model:model.py:2098 Deploying ch:amd64/jammy/landscape-client-69
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:database - $deploy-13:backend-database
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:database <-> mysql-router:backend-database
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:certificates - $deploy-24:certificates
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:certificates <-> self-signed-certificates:certificates
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-13:certificates - $deploy-24:certificates
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router:certificates <-> self-signed-certificates:certificates
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:s3-parameters - $deploy-21:s3-credentials
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:s3-parameters <-> s3-integrator:s3-credentials
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:database - $deploy-1:mysql
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:database <-> data-integrator:mysql
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:database - $deploy-27:mysql
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:database <-> sysbench:mysql
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:cos-agent - $deploy-4:cos-agent
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:cos-agent <-> grafana-agent:cos-agent
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:juju-info - $deploy-30:juju-info
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:juju-info <-> ubuntu-advantage:juju-info
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-10:juju-info - $deploy-7:container
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql:juju-info <-> landscape-client:container
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-13:database - $deploy-15:mysql
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router:database <-> mysql-router-data-integrator:mysql
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-15:juju-info - $deploy-4:juju-info
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router-data-integrator:juju-info <-> grafana-agent:juju-info
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-13:cos-agent - $deploy-4:cos-agent
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router:cos-agent <-> grafana-agent:cos-agent
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-15:juju-info - $deploy-30:juju-info
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router-data-integrator:juju-info <-> ubuntu-advantage:juju-info
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add relation $deploy-15:juju-info - $deploy-7:container
+[32mINFO    [0m juju.bundle:bundle.py:865 Relating mysql-router-data-integrator:juju-info <-> landscape-client:container
+[33mWARNING [0m juju.model:model.py:1564 relate is deprecated and will be removed. Use integrate instead.
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-1 unit to $addMachines-32
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-15 unit to $addMachines-33
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-10
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-13
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-15
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-18
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-1
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-21
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-24
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-27
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-30
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-4
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: set annotations for $deploy-7
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-10 unit to $addMachines-34
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-10 unit to $addMachines-35
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-10 unit to $addMachines-36
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-21 unit to $addMachines-37
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add new machine
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-24 unit to $addMachines-38
+[32mINFO    [0m juju.bundle:bundle.py:416 Applying change: add $deploy-27 unit to $addMachines-39
+[32mINFO    [0m integration.test_smoke:test_smoke.py:41 Waiting for active: mysql, self-signed-certificates, sysbench
+[32mINFO    [0m integration.test_smoke:test_smoke.py:47 Waiting for blocked: data-integrator, grafana-agent, mysql-router-data-integrator, landscape-client, s3-integrator, ubuntu-advantage
+[32mINFO    [0m integration.test_smoke:test_smoke.py:54 Waiting for waiting: mysql-router
+[32mINFO    [0m integration.test_smoke:test_smoke.py:72 Configuring s3-integrator credentials
+[32mINFO    [0m integration.test_smoke:test_smoke.py:41 Waiting for active: mysql, self-signed-certificates, sysbench, s3-integrator
+[32mINFO    [0m integration.test_smoke:test_smoke.py:47 Waiting for blocked: data-integrator, grafana-agent, mysql-router-data-integrator, landscape-client, ubuntu-advantage
+[32mINFO    [0m integration.test_smoke:test_smoke.py:54 Waiting for waiting: mysql-router
+[32mINFO    [0m integration.test_smoke:test_smoke.py:86 Configuring data-integrator
+[32mINFO    [0m integration.test_smoke:test_smoke.py:41 Waiting for active: mysql, self-signed-certificates, sysbench, s3-integrator, data-integrator
+[32mINFO    [0m integration.test_smoke:test_smoke.py:47 Waiting for blocked: grafana-agent, mysql-router-data-integrator, landscape-client, ubuntu-advantage
+[32mINFO    [0m integration.test_smoke:test_smoke.py:54 Waiting for waiting: mysql-router
+[32mINFO    [0m integration.test_smoke:test_smoke.py:95 Confirming data-integrator's database exists
+[32mINFO    [0m integration.test_smoke:test_smoke.py:112 Configuring mysql-router-data-integrator
+[32mINFO    [0m integration.test_smoke:test_smoke.py:41 Waiting for active: mysql, self-signed-certificates, sysbench, s3-integrator, data-integrator, mysql-router-data-integrator, mysql-router
+[32mINFO    [0m integration.test_smoke:test_smoke.py:47 Waiting for blocked: grafana-agent, landscape-client, ubuntu-advantage
+[32mINFO    [0m integration.test_smoke:test_smoke.py:124 Confirming data-integrator's database exists
+[32mINFO    [0m integration.test_smoke:test_smoke.py:130 Adding mysql-test-app unit
+[32mINFO    [0m integration.test_smoke:test_smoke.py:41 Waiting for active: mysql, self-signed-certificates, sysbench, s3-integrator, data-integrator, mysql-router-data-integrator, mysql-router
+[32mINFO    [0m integration.test_smoke:test_smoke.py:47 Waiting for blocked: grafana-agent, landscape-client, ubuntu-advantage
+[32mINFO    [0m integration.test_smoke:test_smoke.py:54 Waiting for waiting: mysql-test-app
+[32mINFO    [0m pytest_operator.plugin:plugin.py:903 Model status:
+
+Model  Controller           Cloud/Region         Version  SLA          Timestamp
+test   localhost-localhost  localhost/localhost  3.5.4    unsupported  01:38:41Z
+
+App                           Version          Status   Scale  Charm                     Channel      Rev  Exposed  Message
+data-integrator                                active       1  data-integrator           latest/edge   71  no       
+grafana-agent                                  blocked      4  grafana-agent             latest/edge  282  no       Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+landscape-client                               blocked      4  landscape-client          latest/edge   69  no       Registration failed!
+mysql                         8.0.37-0ubun...  active       3  mysql                     8.0/edge     297  no       
+mysql-router                  8.0.37-0ubun...  active       1  mysql-router              dpe/edge     247  no       
+mysql-router-data-integrator                   active       1  data-integrator           latest/edge   71  no       
+mysql-test-app                                 waiting    0/1  mysql-test-app            latest/edge   63  no       waiting for machine
+s3-integrator                                  active       1  s3-integrator             latest/edge   59  no       
+self-signed-certificates                       active       1  self-signed-certificates  latest/edge  200  no       
+sysbench                                       active       1  sysbench                  latest/edge   78  no       
+ubuntu-advantage                               blocked      4  ubuntu-advantage          latest/edge  113  no       No token configured
+
+Unit                             Workload  Agent       Machine  Public address  Ports           Message
+data-integrator/0*               active    idle        0        10.89.129.168                   
+mysql-router-data-integrator/0*  active    executing   1        10.89.129.219                   
+  grafana-agent/0*               blocked   executing            10.89.129.219                   Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+  landscape-client/0*            blocked   idle                 10.89.129.219                   Registration failed!
+  mysql-router/0*                active    executing            10.89.129.219   6446-6447/tcp   
+  ubuntu-advantage/0*            blocked   idle                 10.89.129.219                   No token configured
+mysql-test-app/0                 waiting   allocating  8                                        waiting for machine
+mysql/0*                         active    executing   2        10.89.129.222   3306,33060/tcp  
+  grafana-agent/3                blocked   idle                 10.89.129.222                   Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+  landscape-client/3             blocked   idle                 10.89.129.222                   Registration failed!
+  ubuntu-advantage/3             blocked   idle                 10.89.129.222                   No token configured
+mysql/1                          active    executing   3        10.89.129.155   3306,33060/tcp  
+  grafana-agent/1                blocked   idle                 10.89.129.155                   Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+  landscape-client/1             blocked   idle                 10.89.129.155                   Registration failed!
+  ubuntu-advantage/1             blocked   idle                 10.89.129.155                   No token configured
+mysql/2                          active    executing   4        10.89.129.157   3306,33060/tcp  
+  grafana-agent/2                blocked   idle                 10.89.129.157                   Missing ['grafana-cloud-config']|['grafana-dashboards-provider']|['logging-consumer']|['send-remote-write'] for cos-a...
+  landscape-client/2             blocked   idle                 10.89.129.157                   Registration failed!
+  ubuntu-advantage/2             blocked   idle                 10.89.129.157                   No token configured
+s3-integrator/0*                 active    idle        5        10.89.129.122                   
+self-signed-certificates/0*      active    idle        6        10.89.129.64                    
+sysbench/0*                      active    idle        7        10.89.129.99                    
+
+Machine  State    Address        Inst id        Base          AZ  Message
+0        started  10.89.129.168  juju-828812-0  ubuntu@22.04      Running
+1        started  10.89.129.219  juju-828812-1  ubuntu@22.04      Running
+2        started  10.89.129.222  juju-828812-2  ubuntu@22.04      Running
+3        started  10.89.129.155  juju-828812-3  ubuntu@22.04      Running
+4        started  10.89.129.157  juju-828812-4  ubuntu@22.04      Running
+5        started  10.89.129.122  juju-828812-5  ubuntu@22.04      Running
+6        started  10.89.129.64   juju-828812-6  ubuntu@22.04      Running
+7        started  10.89.129.99   juju-828812-7  ubuntu@22.04      Running
+8        pending                 pending        ubuntu@22.04      Creating container
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:909 Juju error logs:
+
+machine-2: 01:29:35 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-2: 01:29:35 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-mysql-0: 01:29:36 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-3: 01:29:42 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-3: 01:29:42 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-mysql-1: 01:29:43 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-1: 01:29:44 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-1: 01:29:44 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-mysql-router-data-integrator-0: 01:29:47 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-0: 01:29:47 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-0: 01:29:47 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-data-integrator-0: 01:29:49 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-5: 01:29:56 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-5: 01:29:56 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-s3-integrator-0: 01:29:57 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-grafana-agent-0: 01:29:58 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-ubuntu-advantage-0: 01:29:59 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-landscape-client-0: 01:30:02 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-mysql-router-0: 01:30:02 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+machine-4: 01:30:03 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-4: 01:30:03 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-6: 01:30:03 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-6: 01:30:03 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-7: 01:30:03 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-7: 01:30:03 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-mysql-2: 01:30:04 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-sysbench-0: 01:30:05 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-self-signed-certificates-0: 01:30:05 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-ubuntu-advantage-1: 01:30:57 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-landscape-client-1: 01:30:57 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-grafana-agent-1: 01:31:02 ERROR juju.worker.meterstatus error running "meter-status-changed": exit status 1
+unit-landscape-client-2: 01:31:11 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-ubuntu-advantage-2: 01:31:12 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-grafana-agent-2: 01:31:17 ERROR juju.worker.meterstatus error running "meter-status-changed": exit status 1
+unit-landscape-client-0: 01:31:41 CRITICAL unit.landscape-client/0.juju-log   File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 261, in <module>
+    main(LandscapeClientCharm)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/main.py", line 436, in main
+    _emit_charm_event(charm, dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/main.py", line 144, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/framework.py", line 351, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/framework.py", line 853, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/venv/ops/framework.py", line 942, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 215, in _on_config_changed
+    self.run_landscape_client()
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 190, in run_landscape_client
+    self.send_registration()
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 178, in send_registration
+    if process_helper([CLIENT_CONFIG_CMD, "--silent"]):
+  File "/var/lib/juju/agents/unit-landscape-client-0/charm/./src/charm.py", line 104, in process_helper
+    log_error("".join(traceback.format_stack()))
+
+unit-landscape-client-0: 01:31:41 CRITICAL unit.landscape-client/0.juju-log An account name and computer title are required.
+Aborting Landscape configuration
+
+unit-landscape-client-1: 01:31:47 CRITICAL unit.landscape-client/1.juju-log   File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 261, in <module>
+    main(LandscapeClientCharm)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/main.py", line 436, in main
+    _emit_charm_event(charm, dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/main.py", line 144, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/framework.py", line 351, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/framework.py", line 853, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/venv/ops/framework.py", line 942, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 215, in _on_config_changed
+    self.run_landscape_client()
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 190, in run_landscape_client
+    self.send_registration()
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 178, in send_registration
+    if process_helper([CLIENT_CONFIG_CMD, "--silent"]):
+  File "/var/lib/juju/agents/unit-landscape-client-1/charm/./src/charm.py", line 104, in process_helper
+    log_error("".join(traceback.format_stack()))
+
+unit-landscape-client-1: 01:31:47 CRITICAL unit.landscape-client/1.juju-log An account name and computer title are required.
+Aborting Landscape configuration
+
+unit-landscape-client-2: 01:31:48 CRITICAL unit.landscape-client/2.juju-log   File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 261, in <module>
+    main(LandscapeClientCharm)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/main.py", line 436, in main
+    _emit_charm_event(charm, dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/main.py", line 144, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/framework.py", line 351, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/framework.py", line 853, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/venv/ops/framework.py", line 942, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 215, in _on_config_changed
+    self.run_landscape_client()
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 190, in run_landscape_client
+    self.send_registration()
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 178, in send_registration
+    if process_helper([CLIENT_CONFIG_CMD, "--silent"]):
+  File "/var/lib/juju/agents/unit-landscape-client-2/charm/./src/charm.py", line 104, in process_helper
+    log_error("".join(traceback.format_stack()))
+
+unit-landscape-client-2: 01:31:48 CRITICAL unit.landscape-client/2.juju-log An account name and computer title are required.
+Aborting Landscape configuration
+
+unit-mysql-1: 01:32:55 ERROR unit.mysql/1.juju-log certificates:14: Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-1/charm/./src/charm.py", line 859, in <module>
+    main(MySQLOperatorCharm)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 551, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 530, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 519, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 147, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 348, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 860, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 950, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/mysql/v0/tls.py", line 94, in _on_tls_relation_joined
+    if not self.charm.unit_initialized:
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/mysql/v0/mysql.py", line 667, in unit_initialized
+    return self._mysql.cluster_metadata_exists(self.get_unit_address(self.unit))
+  File "/var/lib/juju/agents/unit-mysql-1/charm/./src/charm.py", line 582, in _mysql
+    self.app_peer_data["cluster-name"],
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/model.py", line 1812, in __getitem__
+    return super().__getitem__(key)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/model.py", line 841, in __getitem__
+    return self._data[key]
+KeyError: 'cluster-name'
+unit-mysql-1: 01:32:56 ERROR juju.worker.uniter.operation hook "certificates-relation-joined" (via hook dispatching script: dispatch) failed: exit status 1
+unit-mysql-2: 01:32:57 ERROR unit.mysql/2.juju-log certificates:14: Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-2/charm/./src/charm.py", line 859, in <module>
+    main(MySQLOperatorCharm)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 551, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 530, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 519, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 147, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 348, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 860, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 950, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/mysql/v0/tls.py", line 94, in _on_tls_relation_joined
+    if not self.charm.unit_initialized:
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/mysql/v0/mysql.py", line 667, in unit_initialized
+    return self._mysql.cluster_metadata_exists(self.get_unit_address(self.unit))
+  File "/var/lib/juju/agents/unit-mysql-2/charm/./src/charm.py", line 582, in _mysql
+    self.app_peer_data["cluster-name"],
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/model.py", line 1812, in __getitem__
+    return super().__getitem__(key)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/model.py", line 841, in __getitem__
+    return self._data[key]
+KeyError: 'cluster-name'
+unit-mysql-2: 01:32:57 ERROR juju.worker.uniter.operation hook "certificates-relation-joined" (via hook dispatching script: dispatch) failed: exit status 1
+unit-mysql-1: 01:33:02 ERROR unit.mysql/1.juju-log certificates:14: Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-1/charm/./src/charm.py", line 859, in <module>
+    main(MySQLOperatorCharm)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 551, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 530, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 519, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 147, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 348, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 860, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 950, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/mysql/v0/tls.py", line 94, in _on_tls_relation_joined
+    if not self.charm.unit_initialized:
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/mysql/v0/mysql.py", line 667, in unit_initialized
+    return self._mysql.cluster_metadata_exists(self.get_unit_address(self.unit))
+  File "/var/lib/juju/agents/unit-mysql-1/charm/./src/charm.py", line 582, in _mysql
+    self.app_peer_data["cluster-name"],
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/model.py", line 1812, in __getitem__
+    return super().__getitem__(key)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/model.py", line 841, in __getitem__
+    return self._data[key]
+KeyError: 'cluster-name'
+unit-mysql-1: 01:33:03 ERROR juju.worker.uniter.operation hook "certificates-relation-joined" (via hook dispatching script: dispatch) failed: exit status 1
+unit-mysql-2: 01:33:03 ERROR unit.mysql/2.juju-log certificates:14: Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-2/charm/./src/charm.py", line 859, in <module>
+    main(MySQLOperatorCharm)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 551, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 530, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 519, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 147, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 348, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 860, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 950, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/mysql/v0/tls.py", line 94, in _on_tls_relation_joined
+    if not self.charm.unit_initialized:
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/mysql/v0/mysql.py", line 667, in unit_initialized
+    return self._mysql.cluster_metadata_exists(self.get_unit_address(self.unit))
+  File "/var/lib/juju/agents/unit-mysql-2/charm/./src/charm.py", line 582, in _mysql
+    self.app_peer_data["cluster-name"],
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/model.py", line 1812, in __getitem__
+    return super().__getitem__(key)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/model.py", line 841, in __getitem__
+    return self._data[key]
+KeyError: 'cluster-name'
+unit-mysql-2: 01:33:03 ERROR juju.worker.uniter.operation hook "certificates-relation-joined" (via hook dispatching script: dispatch) failed: exit status 1
+unit-ubuntu-advantage-3: 01:33:11 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-landscape-client-3: 01:33:11 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-grafana-agent-3: 01:33:13 ERROR juju.worker.meterstatus error running "meter-status-changed": charm missing from disk
+unit-mysql-1: 01:33:14 ERROR unit.mysql/1.juju-log certificates:14: Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-1/charm/./src/charm.py", line 859, in <module>
+    main(MySQLOperatorCharm)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 551, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 530, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 519, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 147, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 348, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 860, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 950, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/mysql/v0/tls.py", line 94, in _on_tls_relation_joined
+    if not self.charm.unit_initialized:
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/mysql/v0/mysql.py", line 667, in unit_initialized
+    return self._mysql.cluster_metadata_exists(self.get_unit_address(self.unit))
+  File "/var/lib/juju/agents/unit-mysql-1/charm/./src/charm.py", line 582, in _mysql
+    self.app_peer_data["cluster-name"],
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/model.py", line 1812, in __getitem__
+    return super().__getitem__(key)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/model.py", line 841, in __getitem__
+    return self._data[key]
+KeyError: 'cluster-name'
+unit-mysql-1: 01:33:15 ERROR juju.worker.uniter.operation hook "certificates-relation-joined" (via hook dispatching script: dispatch) failed: exit status 1
+unit-mysql-2: 01:33:15 ERROR unit.mysql/2.juju-log certificates:14: Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-2/charm/./src/charm.py", line 859, in <module>
+    main(MySQLOperatorCharm)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 551, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 530, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 519, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 147, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 348, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 860, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 950, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/mysql/v0/tls.py", line 94, in _on_tls_relation_joined
+    if not self.charm.unit_initialized:
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/mysql/v0/mysql.py", line 667, in unit_initialized
+    return self._mysql.cluster_metadata_exists(self.get_unit_address(self.unit))
+  File "/var/lib/juju/agents/unit-mysql-2/charm/./src/charm.py", line 582, in _mysql
+    self.app_peer_data["cluster-name"],
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/model.py", line 1812, in __getitem__
+    return super().__getitem__(key)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/model.py", line 841, in __getitem__
+    return self._data[key]
+KeyError: 'cluster-name'
+unit-mysql-2: 01:33:15 ERROR juju.worker.uniter.operation hook "certificates-relation-joined" (via hook dispatching script: dispatch) failed: exit status 1
+unit-mysql-1: 01:33:36 ERROR unit.mysql/1.juju-log certificates:14: Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-1/charm/./src/charm.py", line 859, in <module>
+    main(MySQLOperatorCharm)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 551, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 530, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 519, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/main.py", line 147, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 348, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 860, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/framework.py", line 950, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/mysql/v0/tls.py", line 94, in _on_tls_relation_joined
+    if not self.charm.unit_initialized:
+  File "/var/lib/juju/agents/unit-mysql-1/charm/lib/charms/mysql/v0/mysql.py", line 667, in unit_initialized
+    return self._mysql.cluster_metadata_exists(self.get_unit_address(self.unit))
+  File "/var/lib/juju/agents/unit-mysql-1/charm/./src/charm.py", line 582, in _mysql
+    self.app_peer_data["cluster-name"],
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/model.py", line 1812, in __getitem__
+    return super().__getitem__(key)
+  File "/var/lib/juju/agents/unit-mysql-1/charm/venv/ops/model.py", line 841, in __getitem__
+    return self._data[key]
+KeyError: 'cluster-name'
+unit-mysql-1: 01:33:36 ERROR juju.worker.uniter.operation hook "certificates-relation-joined" (via hook dispatching script: dispatch) failed: exit status 1
+unit-mysql-2: 01:33:38 ERROR unit.mysql/2.juju-log certificates:14: Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-2/charm/./src/charm.py", line 859, in <module>
+    main(MySQLOperatorCharm)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 551, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 530, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 519, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/main.py", line 147, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 348, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 860, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/framework.py", line 950, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/mysql/v0/tls.py", line 94, in _on_tls_relation_joined
+    if not self.charm.unit_initialized:
+  File "/var/lib/juju/agents/unit-mysql-2/charm/lib/charms/mysql/v0/mysql.py", line 667, in unit_initialized
+    return self._mysql.cluster_metadata_exists(self.get_unit_address(self.unit))
+  File "/var/lib/juju/agents/unit-mysql-2/charm/./src/charm.py", line 582, in _mysql
+    self.app_peer_data["cluster-name"],
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/model.py", line 1812, in __getitem__
+    return super().__getitem__(key)
+  File "/var/lib/juju/agents/unit-mysql-2/charm/venv/ops/model.py", line 841, in __getitem__
+    return self._data[key]
+KeyError: 'cluster-name'
+unit-mysql-2: 01:33:38 ERROR juju.worker.uniter.operation hook "certificates-relation-joined" (via hook dispatching script: dispatch) failed: exit status 1
+unit-landscape-client-3: 01:33:53 CRITICAL unit.landscape-client/3.juju-log   File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 261, in <module>
+    main(LandscapeClientCharm)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/main.py", line 436, in main
+    _emit_charm_event(charm, dispatcher.event_name)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/main.py", line 144, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/framework.py", line 351, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/framework.py", line 853, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/venv/ops/framework.py", line 942, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 215, in _on_config_changed
+    self.run_landscape_client()
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 190, in run_landscape_client
+    self.send_registration()
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 178, in send_registration
+    if process_helper([CLIENT_CONFIG_CMD, "--silent"]):
+  File "/var/lib/juju/agents/unit-landscape-client-3/charm/./src/charm.py", line 104, in process_helper
+    log_error("".join(traceback.format_stack()))
+
+unit-landscape-client-3: 01:33:53 CRITICAL unit.landscape-client/3.juju-log An account name and computer title are required.
+Aborting Landscape configuration
+
+unit-mysql-router-0: 01:38:03 ERROR unit.mysql-router/0.juju-log Uncaught exception while in charm code:
+Traceback (most recent call last):
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/./src/machine_charm.py", line 211, in <module>
+    ops.main.main(MachineSubordinateRouterCharm)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/__init__.py", line 348, in main
+    return _legacy_main.main(
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/main.py", line 45, in main
+    return _main.main(charm_class=charm_class, use_juju_for_storage=use_juju_for_storage)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/_main.py", line 543, in main
+    manager.run()
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/_main.py", line 529, in run
+    self._emit()
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/_main.py", line 518, in _emit
+    _emit_charm_event(self.charm, self.dispatcher.event_name, self._juju_context)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/_main.py", line 134, in _emit_charm_event
+    event_to_emit.emit(*args, **kwargs)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/framework.py", line 347, in emit
+    framework._emit(event)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/framework.py", line 857, in _emit
+    self._reemit(event_path)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/venv/ops/framework.py", line 947, in _reemit
+    custom_handler(event)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/src/abstract_charm.py", line 353, in reconcile
+    workload_.reconcile(
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/src/workload.py", line 399, in reconcile
+    self._enable_router(event=event, tls=tls, unit_name=unit_name)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/src/workload.py", line 334, in _enable_router
+    self._bootstrap_router(event=event, tls=tls)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/src/machine_workload.py", line 70, in _bootstrap_router
+    super()._bootstrap_router(event=event, tls=tls)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/src/workload.py", line 269, in _bootstrap_router
+    self._container.run_mysql_router(command, timeout=30)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/src/container.py", line 196, in run_mysql_router
+    return self._run_command(args, timeout=timeout)
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/lib/charms/tempo_k8s/v1/charm_tracing.py", line 735, in wrapped_function
+    return callable(*args, **kwargs)  # type: ignore
+  File "/var/lib/juju/agents/unit-mysql-router-0/charm/src/snap.py", line 263, in _run_command
+    output = subprocess.run(
+  File "/usr/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.10/subprocess.py", line 1154, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.10/subprocess.py", line 2022, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.10/subprocess.py", line 1198, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['charmed-mysql.mysqlrouter', '--bootstrap', 'relation-13_58e202e450134d:r72unj3K95IM5nAfVNhTXoMs@10.89.129.222:3306', '--strict', '--force', '--conf-set-option', 'http_server.bind_address=127.0.0.1', '--conf-set-option', 'http_auth_backend:default_auth_backend.backend=file', '--conf-set-option', 'http_auth_backend:default_auth_backend.filename=/etc/mysqlrouter/rest_api_credentials', '--conf-use-gr-notifications', '--conf-bind-address', '0.0.0.0']' timed out after 30 seconds
+unit-mysql-router-0: 01:38:03 ERROR juju.worker.uniter.operation hook "update-status" (via hook dispatching script: dispatch) failed: exit status 1
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:991 Forgetting model main...
