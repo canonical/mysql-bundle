@@ -39,13 +39,13 @@ If a model does not exist, it can be created by setting the `create_model` varia
 
 ```shell
 terraform apply \
-	-var='mysql_backup_access_key=<access_key>' \ 
-	-var='mysql_backup_bucket_name=<bucket>' \ 
-	-var='mysql_backup_endpoint=<endpoint url>' \ 
-	-var='mysql_backup_region=<region>' \
-	-var='mysql_backup_secret_key=<secret_key>' \
-    -var='model_name=<model_name>' \
-    -var='create_model=true'
+	-var mysql_backup_access_key='<access_key>' \ 
+	-var mysql_backup_bucket_name='<bucket>' \ 
+	-var mysql_backup_endpoint='<endpoint url>' \ 
+	-var mysql_backup_region='<region>' \
+	-var mysql_backup_secret_key='<secret_key>' \
+    -var model_name='<model_name>' \
+    -var create_model=true
 ```
 
 By default, it is set to `false`, requiring that the model already exists and is set through the `model_name` variable.
@@ -56,11 +56,11 @@ To deploy to arm64, set the `arch` variable to `arm64`.
 
 ```shell
 terraform apply \
-	-var='mysql_backup_access_key=<access_key>' \ 
-	-var='mysql_backup_bucket_name=<bucket>' \ 
-	-var='mysql_backup_endpoint=<endpoint url>' \ 
-	-var='mysql_backup_region=<region>' \
-	-var='mysql_backup_secret_key=<secret_key>' \
-    -var='model_name=<model_name>' \
-    -var='arch=arm64'
+	-var mysql_backup_access_key='<access_key>' \ 
+	-var mysql_backup_bucket_name='<bucket>' \ 
+	-var mysql_backup_endpoint='<endpoint url>' \ 
+	-var mysql_backup_region='<region>' \
+	-var mysql_backup_secret_key='<secret_key>' \
+    -var model_name='<model_name>' \
+    -var arch='arm64'
 ```
