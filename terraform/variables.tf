@@ -39,7 +39,7 @@ variable "mysql_backup_endpoint" {
 }
 
 variable "mysql_backup_bucket_name" {
-  description = "MySQL K8s backup bucket name"
+  description = "MySQL backup bucket name"
   type        = string
 }
 

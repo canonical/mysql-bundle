@@ -1,6 +1,6 @@
-# Charmed MySQL K8s Terraform solution
+# Charmed MySQL Terraform solution
 
-This is a Terraform module facilitating the deployment of Charmed MySQL K8s in integrated fashion, using the [Terraform juju provider](https://github.com/juju/terraform-provider-juju/). For more information, refer to the provider [documentation](https://registry.terraform.io/providers/juju/juju/latest/docs).
+This is a Terraform module facilitating the deployment of Charmed MySQL in integrated fashion, using the [Terraform juju provider](https://github.com/juju/terraform-provider-juju/). For more information, refer to the provider [documentation](https://registry.terraform.io/providers/juju/juju/latest/docs).
 
 ## API
 
