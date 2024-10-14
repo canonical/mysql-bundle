@@ -63,7 +63,7 @@ applications:
     charm: self-signed-certificates
     constraints: arch=amd64
     num_units: 1
-    revision: 200
+    revision: 202
     series: jammy
     to:
     - '6'
