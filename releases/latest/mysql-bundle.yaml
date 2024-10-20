@@ -4,7 +4,7 @@ applications:
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 71
+    revision: 72
     series: jammy
     to:
     - '0'
@@ -39,7 +39,7 @@ applications:
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 71
+    revision: 72
     series: jammy
     to:
     - '1'
@@ -54,7 +54,7 @@ applications:
     charm: s3-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 65
+    revision: 71
     series: jammy
     to:
     - '5'
@@ -72,14 +72,14 @@ applications:
     charm: sysbench
     constraints: arch=amd64
     num_units: 1
-    revision: 83
+    revision: 89
     series: jammy
     to:
     - '7'
   ubuntu-advantage:
     channel: latest/edge
     charm: ubuntu-advantage
-    revision: 113
+    revision: 133
     series: jammy
 description: Charmed MySQL bundle
 issues: https://github.com/canonical/mysql-bundle/issues
