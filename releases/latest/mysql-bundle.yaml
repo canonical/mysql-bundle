@@ -4,26 +4,26 @@ applications:
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 72
+    revision: 74
     series: jammy
     to:
     - '0'
   grafana-agent:
     channel: latest/edge
     charm: grafana-agent
-    revision: 286
+    revision: 306
     series: jammy
   landscape-client:
     channel: latest/edge
     charm: landscape-client
-    revision: 69
+    revision: 70
     series: jammy
   mysql:
     channel: 8.0/edge
     charm: mysql
     constraints: arch=amd64
     num_units: 3
-    revision: 303
+    revision: 306
     series: jammy
     to:
     - '2'
@@ -32,14 +32,14 @@ applications:
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 247
+    revision: 258
     series: jammy
   mysql-router-data-integrator:
     channel: latest/edge
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 72
+    revision: 74
     series: jammy
     to:
     - '1'
@@ -54,7 +54,7 @@ applications:
     charm: s3-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 71
+    revision: 79
     series: jammy
     to:
     - '5'
@@ -63,7 +63,7 @@ applications:
     charm: self-signed-certificates
     constraints: arch=amd64
     num_units: 1
-    revision: 202
+    revision: 206
     series: jammy
     to:
     - '6'
@@ -72,14 +72,14 @@ applications:
     charm: sysbench
     constraints: arch=amd64
     num_units: 1
-    revision: 89
+    revision: 109
     series: jammy
     to:
     - '7'
   ubuntu-advantage:
     channel: latest/edge
     charm: ubuntu-advantage
-    revision: 133
+    revision: 137
     series: jammy
 description: Charmed MySQL bundle
 issues: https://github.com/canonical/mysql-bundle/issues
