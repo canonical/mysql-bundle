@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Deploy bundle with app and release as a product.","1013936","test_smoke","tests.integration","Sat Jan 11 01:23:09 UTC 2025","passed","Sat Jan 11 01:40:03 UTC 2025","","test_smoke","",""
