@@ -11,7 +11,7 @@ applications:
   grafana-agent:
     channel: latest/edge
     charm: grafana-agent
-    revision: 365
+    revision: 373
     series: jammy
   landscape-client:
     channel: latest/edge
@@ -23,7 +23,7 @@ applications:
     charm: mysql
     constraints: arch=amd64
     num_units: 3
-    revision: 326
+    revision: 331
     series: jammy
     to:
     - '2'
@@ -32,7 +32,7 @@ applications:
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 300
+    revision: 312
     series: jammy
   mysql-router-data-integrator:
     channel: latest/edge
@@ -54,7 +54,7 @@ applications:
     charm: s3-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 97
+    revision: 99
     series: jammy
     to:
     - '5'
