@@ -4,26 +4,26 @@ applications:
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 80
+    revision: 88
     series: jammy
     to:
     - '0'
   grafana-agent:
     channel: latest/edge
     charm: grafana-agent
-    revision: 385
+    revision: 400
     series: jammy
   landscape-client:
     channel: latest/edge
     charm: landscape-client
-    revision: 70
+    revision: 71
     series: jammy
   mysql:
     channel: 8.0/edge
     charm: mysql
     constraints: arch=amd64
     num_units: 3
-    revision: 331
+    revision: 341
     series: jammy
     to:
     - '2'
@@ -32,14 +32,14 @@ applications:
   mysql-router:
     channel: dpe/edge
     charm: mysql-router
-    revision: 312
+    revision: 321
     series: jammy
   mysql-router-data-integrator:
     channel: latest/edge
     charm: data-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 80
+    revision: 88
     series: jammy
     to:
     - '1'
@@ -54,7 +54,7 @@ applications:
     charm: s3-integrator
     constraints: arch=amd64
     num_units: 1
-    revision: 99
+    revision: 108
     series: jammy
     to:
     - '5'
