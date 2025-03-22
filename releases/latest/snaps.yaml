@@ -4,7 +4,7 @@ packages:
   revision: 286
 - name: charmed-mysql
   push_channel: 8.0/edge
-  revision: 121
+  revision: 139
 - name: grafana-agent
   push_channel: latest/stable
   revision: 94
