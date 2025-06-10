@@ -1,10 +1,10 @@
 packages:
 - name: canonical-livepatch
   push_channel: latest/stable
-  revision: 286
+  revision: 316
 - name: charmed-mysql
   push_channel: 8.0/edge
-  revision: 121
+  revision: 139
 - name: grafana-agent
   push_channel: latest/stable
   revision: 94
