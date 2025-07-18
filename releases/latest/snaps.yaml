@@ -1,7 +1,7 @@
 packages:
 - name: canonical-livepatch
   push_channel: latest/stable
-  revision: 316
+  revision: 341
 - name: charmed-mysql
   push_channel: 8.0/edge
   revision: 139
