@@ -65,8 +65,8 @@ async def ensure_statuses(ops_test: OpsTest) -> None:
 
 @pytest.mark.abort_on_fail
 @pytest.mark.group(1)
-async def test_smoke(ops_test: OpsTest) -> None:
-    """Deploy bundle with app and release as a product."""
+async def test_bundle(ops_test: OpsTest) -> None:
+    """Deploy bundle with app."""
     async with ops_test.fast_forward("5s"):
         logger.info("Deploying bundle")
         await ops_test.model.deploy("./releases/latest/mysql-bundle.yaml")
