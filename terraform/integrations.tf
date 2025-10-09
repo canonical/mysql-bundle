@@ -32,7 +32,7 @@ resource "juju_integration" "mysql_server_s3_integrator" {
 }
 
 resource "juju_integration" "mysql_server_certificates" {
-  count = var.tls_offer ? 1 : 0
+  count = local.tls_enabled && var.mysql_server.units > 0 ? 1 : 0
   model = var.model
 
   application {
@@ -46,7 +46,7 @@ resource "juju_integration" "mysql_server_certificates" {
 }
 
 resource "juju_integration" "mysql_server_cos" {
-  count = local.cos_enabled ? 1 : 0
+  count = local.cos_enabled && var.mysql_server.units > 0 ? 1 : 0
   model = var.model
 
   application {
@@ -62,7 +62,7 @@ resource "juju_integration" "mysql_server_cos" {
 # INTEGRATIONS FOR THE MYSQL ROUTER CHARM
 
 resource "juju_integration" "mysql_router_certificates" {
-  count = var.tls_offer ? 1 : 0
+  count = local.tls_enabled && var.mysql_router.units > 0 ? 1 : 0
   model = var.model
 
   application {
@@ -76,7 +76,7 @@ resource "juju_integration" "mysql_router_certificates" {
 }
 
 resource "juju_integration" "mysql_router_cos" {
-  count = local.cos_enabled ? 1 : 0
+  count = local.cos_enabled && var.mysql_router.units > 0 ? 1 : 0
   model = var.model
 
   application {
