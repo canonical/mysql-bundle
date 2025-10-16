@@ -11,7 +11,12 @@ import pytest
 from pytest_operator.plugin import OpsTest
 
 from .connector import MysqlConnector
-from .helpers import get_credentials, get_leader_unit, get_unit_ip
+from .helpers import (
+    get_app_statuses,
+    get_credentials,
+    get_leader_unit,
+    get_unit_ip,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -40,29 +45,28 @@ async def ensure_statuses(ops_test: OpsTest) -> None:
     """Ensure expected statuses of applications."""
     logger.info(f"Waiting for active: {', '.join(active_apps)}")
     await ops_test.model.block_until(
-        lambda: {ops_test.model.applications[app].status for app in active_apps} == {"active"},
+        lambda: get_app_statuses(ops_test, active_apps) == {"active"},
         timeout=TIMEOUT,
     )
 
     logger.info(f"Waiting for blocked: {', '.join(blocked_apps)}")
     await ops_test.model.block_until(
-        lambda: {ops_test.model.applications[app].status for app in blocked_apps} == {"blocked"},
+        lambda: get_app_statuses(ops_test, blocked_apps) == {"blocked"},
         timeout=SHORT_TIMEOUT,
     )
 
     if waiting_apps:
         logger.info(f"Waiting for waiting: {', '.join(waiting_apps)}")
         await ops_test.model.block_until(
-            lambda: {ops_test.model.applications[app].status for app in waiting_apps}
-            == {"waiting"},
+            lambda: get_app_statuses(ops_test, waiting_apps) == {"waiting"},
             timeout=SHORT_TIMEOUT,
         )
 
 
 @pytest.mark.abort_on_fail
 @pytest.mark.group(1)
-async def test_smoke(ops_test: OpsTest) -> None:
-    """Deploy bundle with app and release as a product."""
+async def test_bundle(ops_test: OpsTest) -> None:
+    """Deploy bundle with app."""
     async with ops_test.fast_forward("5s"):
         logger.info("Deploying bundle")
         await ops_test.model.deploy("./releases/latest/mysql-bundle.yaml")
