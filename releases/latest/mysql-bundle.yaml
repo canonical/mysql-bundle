@@ -59,11 +59,11 @@ applications:
     to:
     - '5'
   self-signed-certificates:
-    channel: latest/edge
+    channel: 1/edge
     charm: self-signed-certificates
     constraints: arch=amd64
     num_units: 1
-    revision: 304
+    revision: 455
     series: jammy
     to:
     - '6'
