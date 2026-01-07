@@ -1,0 +1,41 @@
+[32mINFO    [0m integration.test_terraform:test_terraform.py:84 Deploying terraform module
+[32mINFO    [0m integration.test_terraform:test_terraform.py:33 Waiting for active: mysql
+[32mINFO    [0m integration.test_terraform:test_terraform.py:40 Waiting for blocked: s3-integrator
+[32mINFO    [0m integration.test_terraform:test_terraform.py:47 Waiting for unknown: mysql-router
+[32mINFO    [0m integration.test_terraform:test_terraform.py:103 Configuring s3-integrator credentials
+[32mINFO    [0m integration.test_terraform:test_terraform.py:33 Waiting for active: mysql, s3-integrator
+[32mINFO    [0m integration.test_terraform:test_terraform.py:47 Waiting for unknown: mysql-router
+[32mINFO    [0m pytest_operator.plugin:plugin.py:903 Model status:
+
+Model  Controller           Cloud/Region         Version  SLA          Timestamp
+test   localhost-localhost  localhost/localhost  3.6.12   unsupported  01:30:48Z
+
+App            Version          Status   Scale  Charm          Channel        Rev  Exposed  Message
+mysql          8.0.41-0ubun...  active       3  mysql          8.0/stable     366  no       
+mysql-router                    unknown      0  mysql-router   dpe/candidate  355  no       
+s3-integrator                   active       1  s3-integrator  1/edge         255  no       
+
+Unit              Workload  Agent      Machine  Public address  Ports           Message
+mysql/0           waiting   executing  1        10.43.124.17                    Waiting to join the cluster
+mysql/1*          active    executing  2        10.43.124.195   3306,33060/tcp  Primary
+mysql/2           waiting   executing  3        10.43.124.137                   Waiting to join the cluster
+s3-integrator/0*  active    idle       0        10.43.124.80                    
+
+Machine  State    Address        Inst id        Base          AZ             Message
+0        started  10.43.124.80   juju-3a6b0d-0  ubuntu@22.04  runnervmh13bl  Running
+1        started  10.43.124.17   juju-3a6b0d-1  ubuntu@22.04  runnervmh13bl  Running
+2        started  10.43.124.195  juju-3a6b0d-2  ubuntu@22.04  runnervmh13bl  Running
+3        started  10.43.124.137  juju-3a6b0d-3  ubuntu@22.04  runnervmh13bl  Running
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:909 Juju error logs:
+
+machine-0: 01:28:54 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-0: 01:28:54 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-2: 01:29:18 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-2: 01:29:18 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-3: 01:29:34 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-3: 01:29:34 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-1: 01:29:44 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-1: 01:29:45 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:991 Forgetting model main...
