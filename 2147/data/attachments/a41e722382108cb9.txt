@@ -1,0 +1,45 @@
+[32mINFO    [0m integration.test_terraform:test_terraform.py:84 Deploying terraform module
+[32mINFO    [0m integration.test_terraform:test_terraform.py:33 Waiting for active: mysql
+[32mINFO    [0m integration.test_terraform:test_terraform.py:40 Waiting for blocked: s3-integrator
+[32mINFO    [0m integration.test_terraform:test_terraform.py:47 Waiting for unknown: mysql-router
+[32mINFO    [0m integration.test_terraform:test_terraform.py:103 Configuring s3-integrator credentials
+[32mINFO    [0m integration.test_terraform:test_terraform.py:33 Waiting for active: mysql, s3-integrator
+[32mINFO    [0m integration.test_terraform:test_terraform.py:47 Waiting for unknown: mysql-router
+[32mINFO    [0m pytest_operator.plugin:plugin.py:903 Model status:
+
+Model  Controller           Cloud/Region         Version  SLA          Timestamp
+test   localhost-localhost  localhost/localhost  3.6.13   unsupported  01:49:33Z
+
+App            Version          Status   Scale  Charm          Channel         Rev  Exposed  Message
+mysql          8.0.44-0ubun...  active       3  mysql          8.0/stable      444  no       
+mysql-router                    unknown      0  mysql-router   dpe/candidate  1093  no       
+s3-integrator                   active       1  s3-integrator  1/edge          255  no       
+
+Unit              Workload     Agent      Machine  Public address  Ports           Message
+mysql/0*          active       executing  1        10.60.79.214    3306,33060/tcp  Primary
+mysql/1           waiting      executing  2        10.60.79.12                     Waiting to join the cluster
+mysql/2           maintenance  executing  3        10.60.79.249                    (start) Setting up cluster node
+s3-integrator/0*  active       idle       0        10.60.79.93                     
+
+Machine  State    Address       Inst id        Base          AZ             Message
+0        started  10.60.79.93   juju-cfcd70-0  ubuntu@22.04  runnervmkj6or  Running
+1        started  10.60.79.214  juju-cfcd70-1  ubuntu@22.04  runnervmkj6or  Running
+2        started  10.60.79.12   juju-cfcd70-2  ubuntu@22.04  runnervmkj6or  Running
+3        started  10.60.79.249  juju-cfcd70-3  ubuntu@22.04  runnervmkj6or  Running
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:909 Juju error logs:
+
+machine-0: 01:47:27 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-0: 01:47:27 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-1: 01:47:44 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-1: 01:47:44 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-2: 01:47:59 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-2: 01:47:59 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-3: 01:48:21 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-3: 01:48:21 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-mysql-0: 01:48:49 ERROR unit.mysql/0.juju-log Failed command: fuser 3306/tcp; user=None; group=None
+unit-mysql-1: 01:49:00 ERROR unit.mysql/1.juju-log Failed command: fuser 3306/tcp; user=None; group=None
+unit-mysql-2: 01:49:15 ERROR unit.mysql/2.juju-log Failed command: fuser 3306/tcp; user=None; group=None
+unit-mysql-0: 01:49:25 ERROR unit.mysql/0.juju-log Missing S3 parameters: ['bucket', 'access-key', 'secret-key']
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:991 Forgetting model main...
