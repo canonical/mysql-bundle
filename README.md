@@ -18,9 +18,9 @@ juju deploy mysql-bundle
 ```
 
 ## Bundle Components
-- [mysql](https://charmhub.io/mysql): A k8s charm to deploy MySQL with Group Replication.
-- [mysql-router](https://charmhub.io/mysql-router) - a k8s charm to deploy MySQL Router.
-- [tls-certificates-operator](https://charmhub.io/tls-certificates-operator) - TLS operator. Note: The TLS settings in bundles use self-signed-certificates which are not recommended for production clusters, the tls-certificates-operator charm offers a variety of configurations, read more on the TLS charm [here](https://charmhub.io/tls-certificates-operator).
+- [mysql](https://charmhub.io/mysql): a machine charm to deploy MySQL with Group Replication.
+- [mysql-router](https://charmhub.io/mysql-router) - a machine charm to deploy MySQL Router.
+- [tls-certificates-operator](https://charmhub.io/tls-certificates-operator) - TLS operator. **Note**: The TLS settings in bundles use self-signed-certificates which are not recommended for production clusters. The `tls-certificates-operator` charm offers a variety of configurations, read more on the TLS charm [here](https://charmhub.io/tls-certificates-operator).
 
 ## Troubleshooting
 
