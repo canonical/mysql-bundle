@@ -1,0 +1,115 @@
+[32mINFO    [0m integration.test_terraform:test_terraform.py:84 Deploying terraform module
+[32mINFO    [0m integration.test_terraform:test_terraform.py:33 Waiting for active: mysql
+[1m[31mERROR   [0m juju.model:_jasyncio.py:48 Task tmp raised an exception: watcher was stopped
+Traceback (most recent call last):
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/_jasyncio.py", line 36, in _task_result_exp_handler
+    task.result()
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/facade.py", line 482, in wrapper
+    reply = await f(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/_client3.py", line 126, in Next
+    reply = await self.rpc(msg)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/overrides.py", line 116, in rpc
+    result = await self.connection.rpc(msg, encoder=TypeEncoder)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 597, in rpc
+    raise errors.JujuAPIError(result)
+juju.errors.JujuAPIError: watcher was stopped
+[33mWARNING [0m juju.model:__init__.py:1340 Watcher: watcher stopped, restarting
+[33mWARNING [0m juju.client.connection:connection.py:579 RPC: Connection closed, reconnecting
+[33mWARNING [0m juju.client.connection:connection.py:493 Receiver: Connection closed, reconnecting
+[1m[31mERROR   [0m asyncio:base_events.py:1821 Task exception was never retrieved
+future: <Task finished name='Task-758' coro=<Connection.reconnect() done, defined at /home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py:697> exception=InvalidStatus(Response(status_code=503, reason_phrase='Service Unavailable', headers=Headers([('Content-Type', 'text/plain; charset=utf-8'), ('X-Content-Type-Options', 'nosniff'), ('Date', 'Mon, 30 Mar 2026 01:27:32 GMT'), ('Content-Length', '31')]), body=bytearray(b'apiserver shutdown in progress\n'), _exception=InvalidStatus(...)))>
+Traceback (most recent call last):
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 709, in reconnect
+    res = await connector(
+          ^^^^^^^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 800, in _connect_with_login
+    await self._connect(endpoints)
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 743, in _connect
+    result = await task
+             ^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 631, in _wait_for_one
+    return f.result()  # May raise f.exception().
+           ^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 729, in _try_endpoint
+    return await self._open(endpoint, cacert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 333, in _open
+    await websockets.connect(
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/websockets/asyncio/client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/websockets/asyncio/client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/websockets/client.py", line 327, in parse
+    self.process_response(response)
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/websockets/client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 503
+[1m[31mERROR   [0m juju.client.connection:connection.py:587 RPC: Automatic reconnect failed
+[1m[31mERROR   [0m asyncio:base_events.py:1821 Task exception was never retrieved
+future: <Task finished name='Task-760' coro=<Connection.reconnect() done, defined at /home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py:697> exception=InvalidStatus(Response(status_code=503, reason_phrase='Service Unavailable', headers=Headers([('Content-Type', 'text/plain; charset=utf-8'), ('X-Content-Type-Options', 'nosniff'), ('Date', 'Mon, 30 Mar 2026 01:27:32 GMT'), ('Content-Length', '31')]), body=bytearray(b'apiserver shutdown in progress\n'), _exception=InvalidStatus(...)))>
+Traceback (most recent call last):
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 709, in reconnect
+    res = await connector(
+          ^^^^^^^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 800, in _connect_with_login
+    await self._connect(endpoints)
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 743, in _connect
+    result = await task
+             ^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 631, in _wait_for_one
+    return f.result()  # May raise f.exception().
+           ^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 729, in _try_endpoint
+    return await self._open(endpoint, cacert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/juju/client/connection.py", line 333, in _open
+    await websockets.connect(
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/websockets/asyncio/client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/websockets/asyncio/client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/websockets/client.py", line 327, in parse
+    self.process_response(response)
+  File "/home/runner/work/mysql-bundle/mysql-bundle/.tox/integration/lib/python3.12/site-packages/websockets/client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 503
+[32mINFO    [0m pytest_operator.plugin:plugin.py:903 Model status:
+
+Model  Controller           Cloud/Region         Version  SLA          Timestamp
+test   localhost-localhost  localhost/localhost  3.6.19   unsupported  01:28:07Z
+
+App            Version  Status   Scale  Charm          Channel         Rev  Exposed  Message
+mysql                   waiting    0/3  mysql          8.0/stable      444  no       waiting for machine
+mysql-router            unknown      0  mysql-router   dpe/candidate  1093  no       
+s3-integrator           waiting    0/1  s3-integrator  1/edge          520  no       agent initialising
+
+Unit             Workload  Agent       Machine  Public address  Ports  Message
+mysql/0          waiting   allocating  1                               waiting for machine
+mysql/1          waiting   allocating  2                               waiting for machine
+mysql/2          waiting   allocating  3        10.61.21.40            waiting for machine
+s3-integrator/0  waiting   allocating  0        10.61.21.222           agent initialising
+
+Machine  State  Address       Inst id        Base          AZ             Message
+0        down   10.61.21.222  juju-48dea7-0  ubuntu@22.04  runnervmrg6be  Running
+1        down                 pending        ubuntu@22.04                 Creating container
+2        down                 juju-48dea7-2  ubuntu@22.04  runnervmrg6be  Running
+3        down   10.61.21.40   juju-48dea7-3  ubuntu@22.04  runnervmrg6be  Running
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:909 Juju error logs:
+
+machine-0: 01:27:02 ERROR juju.worker.dependency "kvm-container-provisioner" manifold worker returned unexpected error: container types not yet available
+machine-0: 01:27:02 ERROR juju.worker.dependency "lxd-container-provisioner" manifold worker returned unexpected error: container types not yet available
+unit-s3-integrator-0: 01:27:02 ERROR juju.worker.dependency "uniter" manifold worker returned unexpected error: preparing operation "install ch:amd64/s3-integrator-520" for s3-integrator/0: failed to download charm "ch:amd64/s3-integrator-520" from API server: download request with archiveSha256 length 0 not valid
+unit-s3-integrator-0: 01:27:05 ERROR juju.worker.dependency "uniter" manifold worker returned unexpected error: preparing operation "install ch:amd64/s3-integrator-520" for s3-integrator/0: failed to download charm "ch:amd64/s3-integrator-520" from API server: download request with archiveSha256 length 0 not valid
+unit-s3-integrator-0: 01:27:10 ERROR juju.worker.dependency "uniter" manifold worker returned unexpected error: preparing operation "install ch:amd64/s3-integrator-520" for s3-integrator/0: failed to download charm "ch:amd64/s3-integrator-520" from API server: download request with archiveSha256 length 0 not valid
+unit-s3-integrator-0: 01:27:15 ERROR juju.worker.dependency "uniter" manifold worker returned unexpected error: preparing operation "install ch:amd64/s3-integrator-520" for s3-integrator/0: failed to download charm "ch:amd64/s3-integrator-520" from API server: download request with archiveSha256 length 0 not valid
+unit-s3-integrator-0: 01:27:22 ERROR juju.worker.dependency "uniter" manifold worker returned unexpected error: preparing operation "install ch:amd64/s3-integrator-520" for s3-integrator/0: failed to download charm "ch:amd64/s3-integrator-520" from API server: download request with archiveSha256 length 0 not valid
+unit-s3-integrator-0: 01:27:30 ERROR juju.worker.dependency "uniter" manifold worker returned unexpected error: preparing operation "install ch:amd64/s3-integrator-520" for s3-integrator/0: failed to download charm "ch:amd64/s3-integrator-520" from API server: download request with archiveSha256 length 0 not valid
+controller-0: 01:27:43 ERROR juju.worker.provisioner cannot register instance for machine 1: connection is shut down
+controller-0: 01:27:43 ERROR juju.worker.provisioner setting machine status: setting error status for machine "1": connection is shut down
+controller-0: 01:27:46 ERROR juju.worker.provisioner worker 1: shutting down pool due to error while handling a "start-instance 1" task: setting instance info: connection is shut down
+
+[32mINFO    [0m pytest_operator.plugin:plugin.py:991 Forgetting model main...
