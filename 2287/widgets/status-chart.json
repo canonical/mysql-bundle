@@ -1,0 +1,1 @@
+[{"uid":"f83367f9c8901425","name":"test_terraform","time":{},"status":"unknown","severity":"normal"},{"uid":"488930ee72ceb19f","name":"test_snap_install","time":{},"status":"unknown","severity":"normal"},{"uid":"89d64a32908c4b86","name":"test_bundle","time":{"start":1777426185626,"stop":1777426309282,"duration":123656},"status":"broken","severity":"normal"}]
